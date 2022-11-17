@@ -7,9 +7,3 @@ services:
     volumes:
       - ./:/opt/jmeter
     tty: true
-  jms1:
-    image: izzin/jmsecondary
-    container_name: jms1
-    ports:
-      - 50000:50000
-      - 1099:1099
