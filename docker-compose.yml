@@ -4,15 +4,12 @@ services:
   jmp:
     image: izzin/jmprimary
     container_name: jmprimary
-    networks:
-      - jmeter
     volumes:
       - ./:/opt/jmeter
     tty: true
   jms1:
     image: izzin/jmsecondary
     container_name: jms1
-    networks:
-      - jmeter
-networks:
-  jmeter:
+    ports:
+      - 50000:50000
+      - 1099:1099
